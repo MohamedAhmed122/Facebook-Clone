@@ -1,9 +1,9 @@
 import React from 'react';
 
-import ran1 from '../../../../assets/ran1.jpeg'
-import ran2 from '../../../../assets/ran2.jpg'
-import ran3 from '../../../../assets/ran3.jpeg'
-import ran4 from '../../../../assets/ran4.jpeg'
+import ran1 from '../../../assets/ran1.jpeg'
+import ran2 from '../../../assets/ran2.jpg'
+import ran3 from '../../../assets/ran3.jpeg'
+import ran4 from '../../../assets/ran4.jpeg'
 
 import SingleStory from '../Base/SingleStory'
 

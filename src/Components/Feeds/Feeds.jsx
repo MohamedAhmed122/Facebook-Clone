@@ -1,5 +1,5 @@
 import React from 'react';
-import MainStory from './Story/Main/Story'
+import MainStory from '../Story/Main/Story'
 
 import './Styles.css'
 

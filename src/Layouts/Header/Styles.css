@@ -39,6 +39,7 @@
     display: flex;
     flex: 1;
     justify-content: center;
+    background-color: white;
 }
 .header-middle .MuiSvgIcon-root{
     color: gray;
@@ -70,6 +71,7 @@
 .header-info{
     display: flex;
     align-items: center;
+    background-color: white;
     
 }
 .header-info h4{
@@ -77,4 +79,8 @@
 }
 .header-right{
     display: flex;
+    background-color: white;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
 }

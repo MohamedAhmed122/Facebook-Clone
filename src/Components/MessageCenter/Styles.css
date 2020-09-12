@@ -1,0 +1,56 @@
+.MessageCenter{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 15px;
+    width:100%;
+    box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75);
+
+}
+.Message-top{
+    display: flex;
+    border-bottom:2px solid #eff2f5;
+    padding: 15px;
+}
+.Message-top form{
+    display: flex;
+    flex: 1;
+}
+
+.Message-top form input{
+    border: none;
+    outline-width: 0;
+    padding: 5px 20px;
+    margin: 0 10px;
+    border-radius: 33px;
+    background-color: #eff2f5;
+}
+.main-input{
+    flex: 1;
+}
+.Message-top button{
+    display: none;
+    justify-content: space-evenly;
+}
+
+.Message-bottom{
+    display: flex;
+}
+.option{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    color: gray;
+    margin: 5px;
+    cursor: pointer;
+}
+.option h3{
+    font-size: medium;
+    margin-left: 10px;
+}
+
+.option:hover{
+    background-color:#eff2f5 ;
+    border-radius: 20px;
+}

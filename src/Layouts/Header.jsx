@@ -1,5 +1,7 @@
 import React from 'react'
+import person from '../assets/person.png'
 import logo from '../assets/logo.png'
+
 import './Styles.css'
 import SearchIcon from '@material-ui/icons/Search';
 import HomeIcon from '@material-ui/icons/Home';
@@ -20,11 +22,11 @@ const Header =()=>{
                 <img src={logo} alt='logo' />
                 <div className='header-input'>
                     <SearchIcon/>
-                    <input type='text' placeholder=' search...' ></input>
+                    <input type='text' placeholder=' Search Facebook' ></input>
                 </div>
             </div>
             <div className="header-middle">
-                <div className='icons'>
+                <div className='icons icon-home'>
                     <HomeIcon fontSize='large'/>
                 </div>
                 <div className='icons'>
@@ -42,7 +44,7 @@ const Header =()=>{
             </div>
             <div className="header-right">
                 <div className='header-info'>
-                    <Avatar src={logo}/>
+                    <Avatar src={person}/>
                     <h4>Mohamed </h4>
                     
                 </div>

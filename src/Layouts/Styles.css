@@ -5,6 +5,7 @@
    position: sticky;
    background-color: white;
    z-index:100;
+   top:0;
    box-shadow: 0px 5px 8px -9px rgba(0,0, 0, 0.75);
 }
 .header-left{
@@ -57,6 +58,14 @@
     padding: 0 30px;
     border-radius: 10px;
     border-bottom: none;
+}
+.icon-home .MuiSvgIcon-root{
+    color: #2e81f4;
+}
+.icon-home{
+    
+    border-bottom: 4px solid #2e81f4;
+    
 }
 .header-info{
     display: flex;

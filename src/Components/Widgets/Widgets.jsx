@@ -11,7 +11,7 @@ const Widgets = () => {
         frameborder="0"
         allowTransparency="true"
         allow="encrypted-media"
-        style={{border: 'none', overflow: 'hidden', height:'100%'}}
+        style={{border: 'none', overflow: 'hidden', height:'100%', marginRight: '2rem'}}
       />
     </div>
   );

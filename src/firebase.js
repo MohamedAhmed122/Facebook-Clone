@@ -11,4 +11,27 @@ var firebaseConfig = {
     measurementId: "G-WT89DL1ZVJ"
   };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+const firebaseApp=  firebase.initializeApp(firebaseConfig);
+const db =firebaseApp.firestore()
+// const auth = firebase.auth()
+
+  export const socialLogin = async(selectedProvider)=>{
+    let provider;
+    const auth = firebase.auth();
+    if(selectedProvider === 'facebook'){
+        provider = new firebase.auth.FacebookAuthProvider();
+    }
+    if (selectedProvider === 'google'){
+        provider = new firebase.auth.GoogleAuthProvider();
+    }
+    try {
+        const result = await auth.signInWithPopup(provider);
+        console.log(result);
+        // if(result.additionalUserInfo.isNewUser){
+        //     await setUserProfile(result.user)
+        // }
+    } catch (error) {
+   
+        console.log(error)
+    }
+}

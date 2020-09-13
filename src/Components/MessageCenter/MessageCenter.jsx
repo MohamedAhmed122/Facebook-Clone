@@ -12,7 +12,7 @@ import { useSelector } from "react-redux";
 import {db} from '../../Firebase/FirebaseConfig'
 import firebase from '../../firebase'
 
-const MessageCenter = () => {
+export default function MessageCenter  ()  {
   const {currentUser}= useSelector(state => state.auth)
   const [inputField, setInputField] = useState("");
   const [imagefield, setImagefield] = useState("");
@@ -69,4 +69,4 @@ const MessageCenter = () => {
     </div>
   );
 };
-export default MessageCenter;
+

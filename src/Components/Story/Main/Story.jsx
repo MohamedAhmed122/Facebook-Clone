@@ -10,7 +10,7 @@ import SingleStory from '../Base/SingleStory'
 import './Styles.css'
 
 
-const MainStory =()=>{
+export default function MainStory  ()  {
     return(
         <div className='story-row'>
             <SingleStory
@@ -36,4 +36,3 @@ const MainStory =()=>{
         </div>
     )
 }
-export default MainStory

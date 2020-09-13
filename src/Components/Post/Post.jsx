@@ -1,4 +1,4 @@
-import React from "react";
+import React,{forwardRef} from "react";
 
 import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 import ChatBubbleIcon from "@material-ui/icons/ChatBubble";
@@ -10,10 +10,11 @@ import "./PostStyles.css";
 import { Avatar } from "@material-ui/core";
 import { useSelector } from "react-redux";
 
-const Post = ({ timeStamp, image, message }) => {
+export default function Post  ({ timeStamp, image, message })  {
+
   const { currentUser } = useSelector((state) => state.auth);
   return (
-    <section className="section-post">
+    <section  className="section-post">
         <div className="post-top">
             <Avatar className="post-ava" src={currentUser.photoURL} />
             <div className="post-info">
@@ -47,5 +48,5 @@ const Post = ({ timeStamp, image, message }) => {
         </div>
     </section>
   );
-};
-export default Post;
+}
+

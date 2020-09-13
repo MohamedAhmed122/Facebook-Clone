@@ -8,7 +8,7 @@ const AppPage =()=>{
         <Fragment>
             <Header/>
                 <div style={{display: 'flex'}}> 
-                    <div style={{padding:'25px 15px',flex:0.33}}>
+                    <div style={{padding:'10px 15px',flex:0.33}}>
                         <Sidebar />
                     </div>
                     <Feeds />

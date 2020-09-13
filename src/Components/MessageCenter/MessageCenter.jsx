@@ -28,7 +28,7 @@ const MessageCenter = () => {
             onChange={(e) => setInputField(e.target.value)}
             className="main-input"
             type="text"
-            placeholder="what's in your mind"
+            placeholder="what's in your mind?"
           />
           <input
             imageField={imageField}

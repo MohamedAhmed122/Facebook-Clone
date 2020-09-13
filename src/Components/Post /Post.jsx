@@ -8,14 +8,16 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import './PostStyles.css'
 import { Avatar } from '@material-ui/core';
+import { useSelector } from 'react-redux';
 
-const Post =({profilePic, timeStamp, image, username, message})=>{
+const Post =({ timeStamp, image, message})=>{
+    const{ currentUser }= useSelector(state => state.auth)
     return(
         <section className='section-post'>
             <div className='post-top'>
-                <Avatar className='post-ava' src={profilePic} />
+                <Avatar className='post-ava' src={currentUser.photoURL} />
                 <div className='post-info'>
-                    <h3>{username}</h3>
+                    <h3>{currentUser.displayName}</h3>
                     <p>TimeStamp</p>
                 </div>
             </div>

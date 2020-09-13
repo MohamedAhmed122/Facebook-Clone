@@ -8,20 +8,22 @@ import { Avatar } from "@material-ui/core";
 import VideocamIcon from "@material-ui/icons/Videocam";
 import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
+import { useSelector } from "react-redux";
 
 const MessageCenter = () => {
+  const {currentUser}= useSelector(state => state.auth)
   const [inputField, setInputField] = useState("");
-  const [imageField, setImageField] = useState("");
+  const [imagefield, setImagefield] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
     setInputField('')
-    setImageField('')
+    setImagefield('')
   };
 
   return (
     <div className="MessageCenter">
       <div className="Message-top">
-        <Avatar src={person} />
+        <Avatar src={currentUser.photoURL} />
         <form>
           <input
             value={inputField}
@@ -31,8 +33,8 @@ const MessageCenter = () => {
             placeholder="what's in your mind?"
           />
           <input
-            imageField={imageField}
-            onChange={(e) => setImageField(e.target.value)}
+            imagefield={imagefield}
+            onChange={(e) => setImagefield(e.target.value)}
             type="text"
             placeholder="Image Url (Optional)"
           />

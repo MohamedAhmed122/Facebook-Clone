@@ -13,9 +13,11 @@ import { Avatar, IconButton } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { useSelector } from 'react-redux';
 
 
 const Header =()=>{
+    const {currentUser} = useSelector(state => state.auth)
     return(
         <nav className='header'>
             <div className="header-left">
@@ -44,8 +46,8 @@ const Header =()=>{
             </div>
             <div className="header-right">
                 <div className='header-info'>
-                    <Avatar src={person}/>
-                    <h4>Mohamed </h4>
+                    <Avatar src={currentUser.photoURL}/>
+                    <h4>{currentUser.displayName} </h4>
                     
                 </div>
                 <IconButton>

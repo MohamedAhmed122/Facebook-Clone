@@ -1,7 +1,7 @@
 import { USER_SIGN_OUT, USER_SIGN_IN } from "./Auth.Type";
 
 const initialState = {
-    currentUser: null,
+    currentUser: [],
     isAuthenticated: false,
 };
 
@@ -26,3 +26,4 @@ const AuthReducer =(state =initialState ,{type, payload})=>{
         return state
     }   
 }
+export default  AuthReducer

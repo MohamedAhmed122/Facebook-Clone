@@ -8,8 +8,8 @@ const Widgets = () => {
         width="340"
         height="100%"
         scrolling="no"
-        frameborder="0"
-        allowTransparency="true"
+        frameBorder="0"
+        allowtransparency="true"
         allow="encrypted-media"
         style={{border: 'none', overflow: 'hidden', height:'100%', marginRight: '2rem'}}
       />

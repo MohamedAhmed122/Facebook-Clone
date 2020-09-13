@@ -9,11 +9,13 @@ import StorefrontIcon from '@material-ui/icons/Storefront';
 import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
+import { useSelector } from 'react-redux';
 
 const Sidebar =()=>{
+    const {currentUser} = useSelector(state => state.auth)
     return(
         <Fragment>
-            <SidebarRow src={person} title='Mohamed Desouky' />
+            <SidebarRow src={currentUser.photoURL} title={currentUser.displayName}/>
             <SidebarRow Icon={LocalHospitalIcon} title='Covid-19 Information'  />
             <SidebarRow Icon={EmojiFlagsIcon} title='Pages'  />
             <SidebarRow Icon={PeopleIcon} title='Friends'  />

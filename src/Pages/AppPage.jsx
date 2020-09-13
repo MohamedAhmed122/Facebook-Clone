@@ -4,13 +4,15 @@ import Sidebar from "../Layouts/Sidebar/Sidebar";
 import Feeds from "../Components/Feeds/Feeds";
 import Widgets from "../Components/Widgets/Widgets";
 import Login from "../Components/Login/Login";
+import { useSelector } from "react-redux";
 
 const AppPage = () => {
-  const user = null;
+  
+  const {isAuthenticated} = useSelector(state => state.auth) 
 
   return (
     <Fragment>
-        {!user ? (
+        {!isAuthenticated ? (
             <Login />
         ) : (
             <Fragment>
@@ -20,7 +22,7 @@ const AppPage = () => {
                 <Sidebar />
                 </div>
                 <Feeds />
-                <Widgets />
+                {/* <Widgets /> */}
             </div>
             </Fragment>
         )}

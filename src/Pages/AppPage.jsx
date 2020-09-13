@@ -22,7 +22,7 @@ const AppPage = () => {
                 <Sidebar />
                 </div>
                 <Feeds />
-                {/* <Widgets /> */}
+                <Widgets />
             </div>
             </Fragment>
         )}

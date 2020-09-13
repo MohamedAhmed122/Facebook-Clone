@@ -1,5 +1,4 @@
 import React from 'react'
-import person from '../../assets/person.png'
 import logo from '../../assets/logo.png'
 
 import './Styles.css'

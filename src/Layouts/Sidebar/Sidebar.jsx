@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import person from '../../assets/person.png'
+
 import './Styles.css'
 import SidebarRow from './SidebarRow/SidebarRow';
 import EmojiFlagsIcon from '@material-ui/icons/EmojiFlags';

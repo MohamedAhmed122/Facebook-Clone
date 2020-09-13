@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import person from "../../assets/ran1.jpeg";
+
 
 import "./Styles.css";
 
@@ -9,6 +9,8 @@ import VideocamIcon from "@material-ui/icons/Videocam";
 import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import { useSelector } from "react-redux";
+import {db} from '../../Firebase/FirebaseConfig'
+import firebase from '../../firebase'
 
 const MessageCenter = () => {
   const {currentUser}= useSelector(state => state.auth)
@@ -16,6 +18,13 @@ const MessageCenter = () => {
   const [imagefield, setImagefield] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    db.collection('posts').add({
+      message:inputField,
+      image:imagefield,
+      timeStamp: firebase.firestore.FieldValue.serverTimestamp()
+    })
+
     setInputField('')
     setImagefield('')
   };

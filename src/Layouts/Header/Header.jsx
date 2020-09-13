@@ -13,6 +13,8 @@ import AddIcon from '@material-ui/icons/Add';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { useSelector } from 'react-redux';
+import Hidden from '@material-ui/core/Hidden';
+
 
 
 const Header =()=>{
@@ -26,6 +28,7 @@ const Header =()=>{
                     <input type='text' placeholder=' Search Facebook' ></input>
                 </div>
             </div>
+
             <div className="header-middle">
                 <div className='icons icon-home'>
                     <HomeIcon fontSize='large'/>
@@ -43,22 +46,24 @@ const Header =()=>{
                     <SupervisedUserCircleIcon fontSize='large'/>
                 </div>
             </div>
-            <div className="header-right">
-                <div className='header-info'>
-                    <Avatar src={currentUser.photoURL}/>
-                    <h4>{currentUser.displayName} </h4>
-                    
+            <Hidden mdDown>
+                <div className="header-right">
+                    <div className='header-info'>
+                        <Avatar src={currentUser.photoURL}/>
+                        <h4>{currentUser.displayName} </h4>
+                        
+                    </div>
+                    <IconButton>
+                        <AddIcon />
+                    </IconButton>
+                    <IconButton>
+                        <NotificationsActiveIcon />
+                    </IconButton>
+                    <IconButton>
+                    <ExpandMoreIcon />
+                    </IconButton>
                 </div>
-                <IconButton>
-                    <AddIcon />
-                </IconButton>
-                <IconButton>
-                    <NotificationsActiveIcon />
-                </IconButton>
-                <IconButton>
-                <ExpandMoreIcon />
-                </IconButton>
-            </div>
+            </Hidden>
         </nav>
     )
 }

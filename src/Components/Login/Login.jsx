@@ -34,16 +34,26 @@ const Login = () => {
         <section className="login">
         <div className="logo-container">
             <img src={logo} alt="logo" />
-            <img className="img" src={logoText} alt="logo" />
+            <h1> Facebook</h1>
         </div>
         <div>
             <Button
             variant="outlined"
             className="sign-btn"
             type="submit"
+            style={{backgroundColor:  '#F4511E'}}
             onClick={() => signIn("google")}
             >
-            Login With Facebook
+            Sign in With google
+            </Button>
+            <br />
+            <Button
+            variant="outlined"
+            className="sign-btn"
+            type="submit"
+            onClick={() => signIn("facebook")}
+            >
+            Sign in With Facebook
             </Button>
         </div>
         </section>

@@ -10,11 +10,11 @@ import "./PostStyles.css";
 import { Avatar } from "@material-ui/core";
 import { useSelector } from "react-redux";
 
-export default function Post  ({ timeStamp, image, message })  {
+const Post =forwardRef(({timeStamp,message,image}, ref)=>{
 
   const { currentUser } = useSelector((state) => state.auth);
   return (
-    <section  className="section-post">
+    <section ref={ref} className="section-post">
         <div className="post-top">
             <Avatar className="post-ava" src={currentUser.photoURL} />
             <div className="post-info">
@@ -48,5 +48,5 @@ export default function Post  ({ timeStamp, image, message })  {
         </div>
     </section>
   );
-}
-
+})
+export default Post

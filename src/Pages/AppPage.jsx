@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import Header from '../Layouts/Header/Header';
 import Sidebar from '../Layouts/Sidebar/Sidebar';
 import Feeds from '../Components/Feeds/Feeds'
+import Widgets from '../Components/Widgets/Widgets';
  
 const AppPage =()=>{
     return(
@@ -12,6 +13,7 @@ const AppPage =()=>{
                         <Sidebar />
                     </div>
                     <Feeds />
+                    <Widgets />
                 </div>           
         </Fragment>
     )
